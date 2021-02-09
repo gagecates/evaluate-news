@@ -14,7 +14,7 @@
 
         <header>
             <div class="">
-                Logos
+                Logo
             </div>
             <div class="">
                 navigation
@@ -23,23 +23,15 @@
 
         <main>
             <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value=""placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                <form class="" onsubmit="return client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
+                    <input type="submit" name="" value="submit" onclick="return client.handleSubmit(event)" onsubmit="return client.handleSubmit(event)">
                 </form>
             </section>
 
             <section>
                 <strong>Form Results:</strong>
-                <div id="results">
-                    <ul>
-                        <li id='score tag'></li>
-                        <li id='agreement'></li>
-                        <li id='subjectivity'></li>
-                        <li id='confidence'></li>
-                        <li id='irony'></li>
-                    </ul>
-                </div>
+                <div id="results"></div>
             </section>
         </main>
 
@@ -47,5 +39,5 @@
             <p>This is a footer</p>
         </footer>
 
-    </body>
+    <script type="text/javascript" src="main.js"></script></body>
 </html>
