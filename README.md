@@ -13,6 +13,6 @@ to evaluate a news article's content for things such as:
 
     5. Irony
 
-The application uses the 3rd party API from [Meaning Cloud] (http://meaningcloud.com)
+The application uses the 3rd party API from [Meaning Cloud](http://meaningcloud.com)
 
 
