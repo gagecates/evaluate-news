@@ -1,4 +1,4 @@
-import {checkForName} from './nameChecker.js'
+import {checkForURL} from './URLChecker.js'
 
 const apiKey = process.env.API_KEY;
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1';
@@ -10,13 +10,13 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let articleLink = document.getElementById('name').value
-    checkForName(articleLink)
+    if (checkForURL(articleLink)) {
 
-    console.log("::: Form Submitted :::")
+      console.log("::: Form Submitted :::")
 
-    postData('http://localhost:8081/analyse', {text: articleLink})
+      postData('http://localhost:8081/analyse', {text: articleLink})
 
-    .then(newData => {
+      .then(newData => {
 
         document.getElementById('score tag').innerHTML = `Score Tag: ${newData.score_tag}`
         document.getElementById("agreement").innerHTML = `Agreement: ${newData.agreement}`
@@ -24,7 +24,13 @@ function handleSubmit(event) {
         document.getElementById("confidence").innerHTML = `Confidence: ${newData.confidence}`
         document.getElementById("irony").innerHTML = `Irony: ${newData.irony}`
 
-    })
+      })
+
+    } else {
+      alert("Sorry that's not a valid URL!")
+
+    }
+    
 }
 
 
