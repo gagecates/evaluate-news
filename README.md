@@ -29,7 +29,7 @@ npm run build-prod
 ```
 
 ## Testing
-Jest was used for testing. Testing can be accomplished by running
+Jest was used for testing the js functions. Testing can be accomplished by running
 ```
 npm test
 ```
