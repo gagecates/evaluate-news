@@ -16,15 +16,15 @@ function handleSubmit(event) {
 
       postData('http://localhost:8081/analyse', {text: articleLink})
 
-      .then(newData => {
+        .then(newData => {
 
-        document.getElementById('score tag').innerHTML = `Score Tag: ${newData.score_tag}`
-        document.getElementById("agreement").innerHTML = `Agreement: ${newData.agreement}`
-        document.getElementById("subjectivity").innerHTML = `Subjectivity: ${newData.subjectivity}`
-        document.getElementById("confidence").innerHTML = `Confidence: ${newData.confidence}`
-        document.getElementById("irony").innerHTML = `Irony: ${newData.irony}`
+          document.getElementById('score tag').innerHTML = `Score Tag:` + newData.score_tag.toLowerCase()
+          document.getElementById("agreement").innerHTML = `Agreement:` + newData.agreement.toLowerCase()
+          document.getElementById("subjectivity").innerHTML = `Subjectivity:` + newData.subjectivity.toLowerCase()
+          document.getElementById("confidence").innerHTML = `Confidence:` + newData.confidence.toLowerCase()
+          document.getElementById("irony").innerHTML = `Irony:` + newData.irony.toLowerCase()
 
-      })
+        })
 
     } else {
       alert("Sorry that's not a valid URL!")
