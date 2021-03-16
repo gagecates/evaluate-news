@@ -12,26 +12,23 @@
 
     <body>
 
+    <div id='main-container'>
         <header>
-            <div class="">
-                Logos
-            </div>
-            <div class="">
-                navigation
-            </div>
+            <h1>Break it Down</h1>
         </header>
 
         <main>
             <section>
                 <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value=""placeholder="Name">
+                    <label for="input">Enter the URL of a news article to be evaluated by a Natural Language Processor (NLP). </label>
+                    <input id="name" type="text" name="input" value=""placeholder="Article link">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
                 </form>
             </section>
 
             <section>
-                <strong>Form Results:</strong>
-                <div id="results">
+                <strong>Evaluation Results:</strong>
+                <div id="results"><br>
                     <ul>
                         <li id='score tag'></li>
                         <li id='agreement'></li>
@@ -42,19 +39,6 @@
                 </div>
             </section>
         </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-        
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-           </script>
+    </div>
     <script type="text/javascript" src="main.js"></script></body>
 </html>
