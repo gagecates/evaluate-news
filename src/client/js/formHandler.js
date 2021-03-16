@@ -18,11 +18,11 @@ function handleSubmit(event) {
 
         .then(newData => {
 
-          document.getElementById('score tag').innerHTML = `Score Tag:` + newData.score_tag.toLowerCase()
-          document.getElementById("agreement").innerHTML = `Agreement:` + newData.agreement.toLowerCase()
-          document.getElementById("subjectivity").innerHTML = `Subjectivity:` + newData.subjectivity.toLowerCase()
-          document.getElementById("confidence").innerHTML = `Confidence:` + newData.confidence.toLowerCase()
-          document.getElementById("irony").innerHTML = `Irony:` + newData.irony.toLowerCase()
+          document.getElementById('score tag').innerHTML = `Score Tag: ` + newData.score_tag.toLowerCase()
+          document.getElementById("agreement").innerHTML = `Agreement: ` + newData.agreement.toLowerCase()
+          document.getElementById("subjectivity").innerHTML = `Subjectivity: ` + newData.subjectivity.toLowerCase()
+          document.getElementById("confidence").innerHTML = `Confidence: ` + newData.confidence.toLowerCase()
+          document.getElementById("irony").innerHTML = `Irony: ` + newData.irony.toLowerCase()
 
         })
 
