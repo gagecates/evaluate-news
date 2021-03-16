@@ -15,6 +15,10 @@ var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+const port = process.env.PORT || 80;
+
+module.exports = app.listen(port)
+
 
 const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?'
 const apiKey = process.env.API_KEY
@@ -48,12 +52,6 @@ app.post('/analyse', async function(req, res) {
             console.log("error", error);
         
         }
-})
-
-
-// designates what port the app will listen to for incoming requests
-app.listen(8081, function () {
-    console.log('Example app listening on port 8081!')
 })
 
 app.get('/test', function (req, res) {

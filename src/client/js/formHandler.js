@@ -14,7 +14,7 @@ function handleSubmit(event) {
 
       console.log("::: Form Submitted :::")
 
-      postData('http://localhost:8081/analyse', {text: articleLink})
+      postData('https://break-it-down-gmc.herokuapp.com//analyse', {text: articleLink})
 
         .then(newData => {
 
